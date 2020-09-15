@@ -1,0 +1,118 @@
+FIELD SPECIFICATIONS
+
+GENERAL ELEMENTS
+
+Field Name:           MovieTitle 
+
+Specification Type:
+  Unique:  _ 
+  Generic: X 
+  Replica: _ 
+Parent Table:         Movies 
+Label:                Movie Title 
+Source Specification: _ 
+Shared By:            _ 
+Aliases:              Title 
+Description:          The name of the movie  
+
+
+PHYSICAL ELEMENTS
+
+Data Type:            CHAR 
+Length:               200 
+Decimal Places:       X 
+Input Mask:           AAAAx200 
+Display Format:       AAAAx200 
+Character Support:
+  Letters (A-Z):      X 
+  Numbers (0-9):      X 
+  Keyboard (.,/$#%):  X 
+  Special (©®™Σπ):    X 
+
+
+LOGICAL ELEMENTS
+
+Key Type:      Non:        X 
+               Primary:    _ 
+               Foreign:    _ 
+               Alternate:  _ 
+
+Key Structure: Simple:     X 
+               Composite:  _ 
+
+Uniqueness:    Non-unique: X 
+               Unique:     _ 
+
+Null Support:  Nulls OK:   _ 
+               No nulls:   X 
+
+Values Entered By: User:   X 
+                   System: _ 
+
+Required Value:    No:     _ 
+                   Yes:    X 
+
+Default Value:     nan 
+
+Range of Values:   _ 
+
+Edit Rule:
+  Enter now, edits allowed:       X 
+  Enter now, edits not allowed:   _ 
+  Enter later, edits allowed:     _ 
+  Enter later, edits not allowed: _ 
+  Not determined at this time:    _ 
+
+Comparisons Allowed:
+  Same Field:   _ 
+                ALL  _ 
+                =    X 
+                >    _ 
+                >=   _ 
+                !=   X 
+                <    _ 
+                <=   _ 
+
+  Other Fields: _
+                ALL  _ 
+                =    X 
+                >    _ 
+                >=   _ 
+                !=   X 
+                <    _ 
+                <=   _ 
+
+  Value Expr.:  _ 
+                ALL  _ 
+                =    X 
+                >    _ 
+                >=   _ 
+                !=   X 
+                <    _ 
+                <=   _ 
+
+Operations Allowed:
+  Same Field:   _ 
+                ALL  _ 
+                +    _ 
+                -    _ 
+                *    _ 
+                /    _ 
+
+  Other Fields: _ 
+                ALL  _ 
+                +    _ 
+                -    _ 
+                *    _ 
+                /    _ 
+
+  Value Expr.:  _ 
+                ALL  _ 
+                +    _ 
+                -    _ 
+                *    _ 
+                /    _ 
+
+NOTES:
+
+Length of decided upon by googling the longest movie title ever (168 characters!)

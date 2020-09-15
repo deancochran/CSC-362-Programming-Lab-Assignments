@@ -1,0 +1,116 @@
+FIELD SPECIFICATIONS
+
+GENERAL ELEMENTS
+
+Field Name:           ConsumerID
+
+Specification Type:
+  Unique:  _ 
+  Generic: _ 
+  Replica: X 
+Parent Table:         Ratings 
+Label:                Consumer 
+Source Specification: ID 
+Shared By:            Consumers 
+Aliases:              Client 
+Description:          The unique identification number for each client 
+
+
+PHYSICAL ELEMENTS
+
+Data Type:            INT 
+Length:               2 
+Decimal Places:       _ 
+Input Mask:           AAx2 
+Display Format:       AAx2 
+Character Support:
+  Letters (A-Z):      _ 
+  Numbers (0-9):      X 
+  Keyboard (.,/$#%):  _ 
+  Special (©®™Σπ):    _ 
+
+
+LOGICAL ELEMENTS
+
+Key Type:      Non:        _ 
+               Primary:    _ 
+               Foreign:    X 
+               Alternate:  _ 
+
+Key Structure: Simple:     X 
+               Composite:  _ 
+
+Uniqueness:    Non-unique: _ 
+               Unique:     X 
+
+Null Support:  Nulls OK:   _ 
+               No nulls:   X 
+
+Values Entered By: User:   X 
+                   System: _ 
+
+Required Value:    No:     _ 
+                   Yes:    X 
+
+Default Value:     0 
+
+Range of Values:   {0-99} 
+
+Edit Rule:
+  Enter now, edits allowed:       X 
+  Enter now, edits not allowed:   _ 
+  Enter later, edits allowed:     _ 
+  Enter later, edits not allowed: _ 
+  Not determined at this time:    _ 
+
+Comparisons Allowed:
+  Same Field:   _ 
+                ALL  _ 
+                =    X 
+                >    _ 
+                >=   _ 
+                !=   X 
+                <    _ 
+                <=   _ 
+
+  Other Fields: _
+                ALL  _ 
+                =    X 
+                >    _ 
+                >=   _ 
+                !=   X 
+                <    _ 
+                <=   _ 
+
+  Value Expr.:  _ 
+                ALL  _ 
+                =    X 
+                >    _ 
+                >=   _ 
+                !=   X 
+                <    _ 
+                <=   _ 
+
+Operations Allowed:
+  Same Field:   _ 
+                ALL  _ 
+                +    _ 
+                -    _ 
+                *    _ 
+                /    _ 
+
+  Other Fields: _ 
+                ALL  _ 
+                +    _ 
+                -    _ 
+                *    _ 
+                /    _ 
+
+  Value Expr.:  _ 
+                ALL  _ 
+                +    _ 
+                -    _ 
+                *    _ 
+                /    _ 
+
+NOTES:

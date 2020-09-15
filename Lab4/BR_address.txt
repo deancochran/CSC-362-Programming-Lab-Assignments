@@ -1,0 +1,54 @@
+BUSINESS RULE SPECIFICATIONS
+
+RULE INFORMATION
+
+Statement:  Every customer must have and address 
+
+Constraint: In the customer table, there can not be any missing values in the address field 
+
+Type:     Database Oriented:     X 
+          Application Oriented   _ 
+
+Category: Field Specific:        X 
+          Relationship Specific: _ 
+
+Test On:  Insert:                X 
+          Delete:                X 
+          Update:                X
+
+
+STRUCTURES AFFECTED
+
+Field Names: customer.address 
+
+Table Names: customer
+
+
+FIELD ELEMENTS AFFECTED
+
+Physical Elements: Data Type:           _ 
+                   Length:              _ 
+                   Decimal Places:      _ 
+                   Character Support:   _ 
+                   Input Mask:          _ 
+                   Display Format:      _ 
+
+Logical Elements:  Key Type:            _ 
+                   Key Structure:       _ 
+                   Uniqueness:          _ 
+                   Null Support:        X 
+                   Values Entered By:   _ 
+                   Default Value:       _ 
+                   Range of Values:     _ 
+                   Comparisons Allowed: _ 
+                   Operations Allowed:  _ 
+                   Edit Rule:           _ 
+
+
+ACTION TAKEN
+
+The Null Support was set to "no nulls" preventing any one customer 
+to be allowed no to have an address
+
+
+NOTES: _

@@ -1,0 +1,56 @@
+BUSINESS RULE SPECIFICATIONS
+
+RULE INFORMATION
+
+Statement:  Customers can never be deleted
+
+Constraint: In the customers table, there will be no edits allowed, 
+and no removal of customer info, unless it is to update the customers info 
+
+Type:     Database Oriented:     X 
+          Application Oriented   _ 
+
+Category: Field Specific:        _ 
+          Relationship Specific: X 
+
+Test On:  Insert:                _ 
+          Delete:                X 
+          Update:                _
+
+
+STRUCTURES AFFECTED
+
+Field Names: customer.customerID 
+
+Table Names: customer
+
+
+FIELD ELEMENTS AFFECTED
+
+Physical Elements: Data Type:           _ 
+                   Length:              _ 
+                   Decimal Places:      _ 
+                   Character Support:   _ 
+                   Input Mask:          _ 
+                   Display Format:      _ 
+
+Logical Elements:  Key Type:            _ 
+                   Key Structure:       _ 
+                   Uniqueness:          _ 
+                   Null Support:        _ 
+                   Values Entered By:   _ 
+                   Default Value:       _ 
+                   Range of Values:     _ 
+                   Comparisons Allowed: _ 
+                   Operations Allowed:  _ 
+                   Edit Rule:           X 
+
+
+ACTION TAKEN
+
+No edits will be allowed on a customersID. ONce a customer, 
+always a customer, and therefore there should never be a need 
+to rid a customer of his/her info from the Database
+
+
+NOTES: _
