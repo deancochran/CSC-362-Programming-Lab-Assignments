@@ -11,53 +11,55 @@ the 'linking' concept to related movies consumers and genres together.
 */
 
 DROP DATABASE IF EXISTS carpets;
---creating new instance of db
+--  creating new instance of db
 CREATE DATABASE carpets;
---use created instance
+-- use created instance
 USE carpets;
 
 
---TABLE CREATION STATION
+-- TABLE CREATION STATION
 
---creating a rugs table
+-- creating a rugs table
+      -- Inventory ID is primary key
 CREATE TABLE rugs (
-        PRIMARY KEY (InventoryID), --Inventory ID is primary key
-        InventoryID            INT,
-        OriginCountry          VARCHAR, 
-        OriginCity             VARCHAR, 
+        PRIMARY KEY (InventoryID), 
+        InventoryID            INT, -- comment
+        OriginCountry          VARCHAR(64), 
+        OriginCity             VARCHAR(64),
         YearMake               INT,
-        Dimensions             VARCHAR, 
-        Material               VARCHAR,
+        Dimensions             VARCHAR(64), 
+        Material               VARCHAR(64),
         PurchasePrice          FLOAT,
-        DateAquired            VARCHAR,
+        DateAquired            VARCHAR(64),
         MarkUp                 FLOAT,
         ListPrice              FLOAT
 );
 
-
---creating a customers table
+-- creating a customers table
+-- customer ID is primary key
 CREATE TABLE customers (
-        PRIMARY KEY (CustomerID), --customer ID is primary key
+        PRIMARY KEY (CustomerID), -- customer ID is primary key
         CustomerID             INT, 
-        FirstName              VARCHAR, 
-        LastName               VARCHAR, 
-        Address                VARCHAR,
-        City                   VARCHAR,
-        State                  VARCHAR,
+        FirstName              VARCHAR(64), 
+        LastName               VARCHAR(64), 
+        customer_address                VARCHAR(64),
+        City                   VARCHAR(64),
+        customer_state                  VARCHAR(64),
         Zip                    INT,
-        Phone                  VARCHAR
+        Phone                  VARCHAR(64)
 );
 
---creating a linking CustomerOrders table
+-- creating a linking CustomerOrders table
 CREATE TABLE customer_orders (
-        FOREIGN KEY (CustomerID) REFERENCES customers(CustomerID), --customer id is a foreign key
-        FOREIGN KEY (InventoryID) REFERENCES rugs(InventoryID), --inventory id is a foreign key 
+        PRIMARY KEY ( CustomerID, InventoryID ),
+        FOREIGN KEY (CustomerID) REFERENCES customers(CustomerID), -- customer id is a foreign key
+        FOREIGN KEY (InventoryID) REFERENCES rugs(InventoryID), -- inventory id is a foreign key 
         CustomerID             INT,
         InventoryID            INT, 
-        SaleDate               VARCHAR,
+        SaleDate               VARCHAR(64),
         SalePrice              INT,
         NetOnSale              INT,
-        DateReturned           VARCHAR
+        DateReturned           VARCHAR(64)
 );
 
 
@@ -67,7 +69,7 @@ VALUES ('1214', 'Turkey', 'Ushak', '1925', '5x7', 'Wool', '625.00', '4/6/17', '1
        ('1277', 'India', 'Agra', '2017', '8x10','Wool','1,200.00', '6/15/17', '1.00', '2,400.00'),
        ('1278', 'India', 'Agra', '2017', '4x6',  'Wool','450.00',  '6/15/17', '1.20', '990.00');
 
-INSERT INTO customers (CustomerID, FirstName, LastName, Address, City, State, Zip, Phone)
+INSERT INTO customers (CustomerID, FirstName, LastName, customer_customer_address, City, customer_state, Zip, Phone)
 VALUES ('1','Akira', 'Ingram', '68 Country Drive', 'Roseville', 'MI', '48066', '(926) 252-6716'),
        ('2','Meredith', 'Spencer', '9044 Piper Lane', 'North Royalton', 'OH', '44133', '(817) 530-5994'),
        ('3','Marco', 'Page', '747 East Harrison Lane', 'Atlanta', 'GA', '30303', '(588) 799-6535'),
@@ -79,4 +81,12 @@ INSERT INTO customer_orders (CustomerID, InventoryID, SaleDate, SalePrice, NetOn
 VALUES ('6','1214', '12/14/17', '990.00', '625.00', '365.00', 'nan'),
        ('5','1277', '12/24/17', '2,400', '1,200.00', '1,200.00', 'nan'),
        ('2','1219', '12/24/17 ', '40,000', '28,000.00', '12,000.00', '12/26/17');
+
+/*
+CREATE TABLE carpet_trials (
+    carpet_id,
+    customer_id,
+    CHECK ( 4 >= (*)),
+...);
+*/
 
