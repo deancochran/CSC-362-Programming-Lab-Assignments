@@ -88,5 +88,8 @@ CREATE TABLE carpet_trials (
     customer_id,
     CHECK ( 4 >= (*)),
 ...);
+
+
+edit
 */
 
